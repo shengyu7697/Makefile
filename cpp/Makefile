@@ -1,7 +1,8 @@
 TARGET = a.out
 
 CXX = g++
-CXXFLAGS = -g -O0 -Wall -W
+CXXFLAGS = -O0 -g -std=c++11 # for Debug
+#CXXFLAGS = -W -Wall -O3 -std=c++11 # for Release
 LDFLAGS =
 RM = rm -rf
 SRCS = $(wildcard *.cpp)

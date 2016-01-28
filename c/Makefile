@@ -1,7 +1,8 @@
 TARGET = a.out
 
 CC = gcc
-CFLAGS = -g -O0 -Wall -W
+CFLAGS = -O0 -g # for Debug
+#CFLAGS = -W -Wall -O3 # for Release
 LDFLAGS =
 RM = rm -rf
 SRCS = $(wildcard *.c)
