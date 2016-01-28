@@ -5,7 +5,7 @@ CXXFLAGS = -O0 -g -std=c++11 # for Debug
 #CXXFLAGS = -W -Wall -O3 -std=c++11 # for Release
 LDFLAGS =
 RM = rm -rf
-SRCS = $(wildcard *.cpp)
+SRCS = $(wildcard src/*.cpp)
 OBJS = $(SRCS:.cpp=.o)
 
 LIBS =
@@ -25,5 +25,5 @@ $(TARGET): $(OBJS)
 	$(CXX) -c $(CXXFLAGS) -o $@ $<
 
 clean:
-	$(RM) *.o $(TARGET)
+	$(RM) $(OBJS) $(TARGET)
 

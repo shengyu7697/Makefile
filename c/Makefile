@@ -5,7 +5,7 @@ CFLAGS = -O0 -g # for Debug
 #CFLAGS = -W -Wall -O3 # for Release
 LDFLAGS =
 RM = rm -rf
-SRCS = $(wildcard *.c)
+SRCS = $(wildcard src/*.c)
 OBJS = $(SRCS:.c=.o)
 
 LIBS =
@@ -25,5 +25,5 @@ $(TARGET): $(OBJS)
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 clean:
-	$(RM) *.o $(TARGET)
+	$(RM) $(OBJS) $(TARGET)
 
